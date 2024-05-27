@@ -1,6 +1,4 @@
-package CatalogoDeLivros;
-
-import java.util.Date;
+package List.CatalogoDeLivros;
 
 public class Livro {
     public String Titulo;

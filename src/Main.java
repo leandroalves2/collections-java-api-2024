@@ -1,12 +1,13 @@
-import CatalogoDeLivros.CatalogoLivros;
-import CatalogoDeLivros.Livro;
-import Compras.CarrinhoDeCompras;
-import Tarefas.ListaTarefas;
+import List.CatalogoDeLivros.CatalogoLivros;
+import List.CatalogoDeLivros.Livro;
+import List.Compras.CarrinhoDeCompras;
+import List.Pessoas.OrdenacaoPessoas;
+import List.Tarefas.ListaTarefas;
 
 public class Main {
     public static void main(String[] args) {
 
-        CatalogoLivrosFunc();
+        OrdenacaoDePessoas();
 
     }
 
@@ -82,4 +83,24 @@ public class Main {
 
     }
 
+    public static void OrdenacaoDePessoas(){
+
+        OrdenacaoPessoas ordenarPessoas = new OrdenacaoPessoas();
+        ordenarPessoas.adicionarPessoa("Leandro", 29, 1.70);
+        ordenarPessoas.adicionarPessoa("Karoline", 32, 1.75);
+        ordenarPessoas.adicionarPessoa("Luis", 26, 1.81);
+        ordenarPessoas.adicionarPessoa("Celisa", 29, 1.55);
+        ordenarPessoas.adicionarPessoa("Kevin", 27, 1.77);
+        ordenarPessoas.adicionarPessoa("Wilian", 34, 1.90);
+        System.out.println("Lista inicial: ");
+        ordenarPessoas.printarLista();
+
+        System.out.println("");
+        System.out.println("Lista por idade: ");
+        System.out.println(ordenarPessoas.ordenarPorIdade());
+
+        System.out.println("");
+        System.out.println("Lista por altura: ");
+        System.out.println(ordenarPessoas.ordenarPorAltura());
+    }
 }

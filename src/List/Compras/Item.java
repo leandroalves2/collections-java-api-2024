@@ -1,4 +1,4 @@
-package Compras;
+package List.Compras;
 
 public class Item {
     public String Nome;
