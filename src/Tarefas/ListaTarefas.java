@@ -5,9 +5,10 @@ import java.util.List;
 
 public class ListaTarefas {
 
-    public List<Tarefa> listaTarefas = new ArrayList<>();
+    public List<Tarefa> listaTarefas;
 
     public ListaTarefas() {
+        listaTarefas = new ArrayList<>();
     }
 
     public void adicionarTarefa(String descricao){

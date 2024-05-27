@@ -1,11 +1,42 @@
+import CatalogoDeLivros.CatalogoLivros;
+import CatalogoDeLivros.Livro;
 import Compras.CarrinhoDeCompras;
 import Tarefas.ListaTarefas;
 
 public class Main {
     public static void main(String[] args) {
 
-        CarrinhoDeComprasFunc();
+        CatalogoLivrosFunc();
 
+    }
+
+    public static void CatalogoLivrosFunc(){
+        CatalogoLivros catalogo = new CatalogoLivros();
+
+        Livro livro = new Livro("A Guerra dos Tronos", "Martin", 1996);
+        catalogo.adicionarLivro(livro);
+        System.out.println("Lista atual");
+        livro = new Livro("Senhor dos Aneis", "Tolkien", 1954);
+        catalogo.adicionarLivro(livro);
+        livro = new Livro("Jogador Número 1", "Ernest Cline", 2011);
+        catalogo.adicionarLivro(livro);
+        catalogo.listaDeLivros();
+
+        System.out.println("");
+        System.out.println("Pesquisar por Autor: Martin");
+        catalogo.pesquisarPorAutor("Martin");
+
+        System.out.println("");
+        System.out.println("Pesquisar por Autor: Allan");
+        catalogo.pesquisarPorAutor("Allan");
+
+        System.out.println("");
+        System.out.println("Pesquisar por intervalo de ano: 1950 a 2000");
+        catalogo.pesquisarPorIntervaloAnos(1950, 2000);
+
+        System.out.println("");
+        System.out.println("Pesquisar por titulo: Jogador Número 1");
+        catalogo.pesquisarPorTitulo("Jogador Número 1");
     }
 
     public static void ListaTarefasFunc(){
